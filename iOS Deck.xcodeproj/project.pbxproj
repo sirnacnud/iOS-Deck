@@ -54,6 +54,7 @@
 		11BE96EF24DB047B002BD03C /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BE96EE24DB047B002BD03C /* LoginWebView.swift */; };
 		11E2082824E10815003593AE /* StacksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E2082724E10815003593AE /* StacksViewModel.swift */; };
 		11E2082A24E1C09D003593AE /* StackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E2082924E1C09D003593AE /* StackListView.swift */; };
+		AE69540E2641EAB200D5CDB2 /* NCCommunication in Frameworks */ = {isa = PBXBuildFile; productRef = AE69540D2641EAB200D5CDB2 /* NCCommunication */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE69540E2641EAB200D5CDB2 /* NCCommunication in Frameworks */,
 				118F1A0F24EECA3800A1301D /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +337,6 @@
 				11BE969824DA6C1B002BD03C /* Sources */,
 				11BE969924DA6C1B002BD03C /* Frameworks */,
 				11BE969A24DA6C1B002BD03C /* Resources */,
-				11BE96DD24DA6D9E002BD03C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -344,6 +345,7 @@
 			name = "iOS Deck";
 			packageProductDependencies = (
 				118F1A0E24EECA3800A1301D /* Introspect */,
+				AE69540D2641EAB200D5CDB2 /* NCCommunication */,
 			);
 			productName = "iOS Deck";
 			productReference = 11BE969C24DA6C1B002BD03C /* iOS Deck.app */;
@@ -374,6 +376,7 @@
 			mainGroup = 11BE969324DA6C1B002BD03C;
 			packageReferences = (
 				118F1A0D24EECA3800A1301D /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				AE69540C2641EAB200D5CDB2 /* XCRemoteSwiftPackageReference "ios-communication-library" */,
 			);
 			productRefGroup = 11BE969D24DA6C1B002BD03C /* Products */;
 			projectDirPath = "";
@@ -402,34 +405,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		11BE96DD24DA6D9E002BD03C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyXMLParser.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/NCCommunication.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyXMLParser.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyJSON.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NCCommunication.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11BE969824DA6C1B002BD03C /* Sources */ = {
@@ -678,6 +653,14 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		AE69540C2641EAB200D5CDB2 /* XCRemoteSwiftPackageReference "ios-communication-library" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sirnacnud/ios-communication-library.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -685,6 +668,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 118F1A0D24EECA3800A1301D /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		AE69540D2641EAB200D5CDB2 /* NCCommunication */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE69540C2641EAB200D5CDB2 /* XCRemoteSwiftPackageReference "ios-communication-library" */;
+			productName = NCCommunication;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

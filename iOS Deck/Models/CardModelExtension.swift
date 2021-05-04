@@ -1,6 +1,7 @@
 // Created for iOS Deck in 2020
 // Using Swift 5.0
 
+import Foundation
 import NCCommunication
 import MobileCoreServices
 
